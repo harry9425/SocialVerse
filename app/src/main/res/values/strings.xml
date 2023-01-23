@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Caffeine</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hostname">clientapi.sinch.com</string>
+    <string name="key">1e8b37ac-7db0-431c-91b5-b564af339c08</string>
+    <string name="secret">kiSBQIc2OEa5JeNPs/N0Jw==</string>
+    <string name="title_activity_fullscreenvideo">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+</resources>

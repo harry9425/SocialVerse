@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatconslayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:scrollIndicators="right"
+    android:scrollbarStyle="outsideOverlay"
+    android:verticalScrollbarPosition="right">
+
+    <ImageView
+        android:id="@+id/wallpaperset"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/movetobottom"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="6dp"
+            android:visibility="visible"
+            app:cardBackgroundColor="#4CAF50"
+            app:cardCornerRadius="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/chatlinear"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/downchat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:background="#00000000"
+                    android:backgroundTint="#00FFFFFF"
+                    android:onClick="sendmessage"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_baseline_keyboard_double_arrow_down_24"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:titleMargin="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="5dp">
+
+                <ImageButton
+                    android:id="@+id/bkbtnchat"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:backgroundTint="#00FFFFFF"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.333"
+                    app:srcCompat="@drawable/ic_baseline_arrow_back_24" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/chatdp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/userdefaultdp"
+                    app:civ_border_color="#292929"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/bkbtnchat"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/chatnametext"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:text="HARRY AGRAWAL"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/chatdp"
+                    app:layout_constraintEnd_toStartOf="@+id/videocall"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/chatdp"
+                    app:layout_constraintTop_toTopOf="@+id/chatdp"
+                    app:layout_constraintVertical_bias="0.076" />
+
+                <ImageButton
+                    android:id="@+id/videocall"
+                    android:layout_width="40dp"
+                    android:layout_height="0dp"
+                    android:background="#00372424"
+                    android:backgroundTint="#00FFFFFF"
+                    android:padding="4dp"
+                    android:scaleType="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.4"
+                    app:srcCompat="@drawable/ic_baseline_videocam_24" />
+
+                <TextView
+                    android:id="@+id/onoffindi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:text="online"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/chatnametext"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/chatnametext"
+                    app:layout_constraintTop_toBottomOf="@+id/chatnametext"
+                    app:layout_constraintVertical_bias="1.0" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatrecyclerview"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#00FFFFFF"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/chatlinear"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="5dp"
+            android:visibility="visible"
+            app:cardBackgroundColor="@color/grey"
+            app:layout_constraintBottom_toTopOf="@+id/chatrecyclerview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <LinearLayout
+            android:id="@+id/chatlinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/textcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible"
+                    app:cardCornerRadius="30dp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/chatmessage"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+
+                            android:layout_margin="5dp"
+                            android:background="#FFFFFF"
+                            android:backgroundTint="#000000"
+                            android:backgroundTintMode="add"
+                            android:ems="10"
+                            android:hint="Enter your Message"
+                            android:inputType="textMultiLine|textPersonName"
+                            android:maxWidth="190dp"
+                            android:maxLines="3"
+                            android:padding="10dp"
+                            android:textColor="#000000"
+                            android:textColorHint="#83000000"
+                            android:textSize="14sp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/uploadbtn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/camerabtn"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:backgroundTint="@color/grey"
+                            android:onClick="sendimage"
+                            android:scaleType="fitCenter"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.466"
+                            app:srcCompat="@android:drawable/ic_menu_camera" />
+
+                        <ImageButton
+                            android:id="@+id/uploadbtn"
+                            android:layout_width="45dp"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:backgroundTint="@color/colorPrimaryDark"
+                            android:onClick="sendfile"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_baseline_link_24"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/camerabtn"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sendcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="#191919"
+                    app:cardCornerRadius="30dp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageButton
+                            android:id="@+id/chatsendbtn"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginBottom="6dp"
+                            android:background="#00000000"
+                            android:backgroundTint="#00FFFFFF"
+                            android:onClick="sendmessage"
+                            android:scaleX="1.2"
+                            android:scaleY="1.2"
+                            android:src="@drawable/ic_baseline_mic_24"
+                            android:visibility="visible" />
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/audiolayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-5dp"
+                android:innerRadius="0dp"
+                app:cardBackgroundColor="#222222"
+                app:cardCornerRadius="30dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#131313">
+
+                    <ImageButton
+                        android:id="@+id/recordaudiobtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/buttonaround"
+                        android:visibility="visible"
+                        app:layout_constraintBottom_toTopOf="@+id/audiostatus"
+                        app:layout_constraintEnd_toEndOf="@+id/audioinfo"
+                        app:layout_constraintHorizontal_bias="0.488"
+                        app:layout_constraintStart_toStartOf="@+id/audioinfo"
+                        app:layout_constraintTop_toBottomOf="@+id/audioinfo"
+                        app:layout_constraintVertical_bias="0.066"
+                        app:srcCompat="@drawable/ic_baseline_mic_24" />
+
+                    <ImageButton
+                        android:id="@+id/playaudiobtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/buttonbgg"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toTopOf="@+id/audiostatus"
+                        app:layout_constraintEnd_toEndOf="@+id/audioinfo"
+                        app:layout_constraintHorizontal_bias="0.488"
+                        app:layout_constraintStart_toStartOf="@+id/audioinfo"
+                        app:layout_constraintTop_toBottomOf="@+id/audioinfo"
+                        app:layout_constraintVertical_bias="0.066"
+                        app:srcCompat="@drawable/ic_video_play_lib" />
+
+                    <ImageButton
+                        android:id="@+id/closeaudiolay"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="#00FFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/audioinfo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.891"
+                        app:layout_constraintStart_toEndOf="@+id/audioinfo"
+                        app:layout_constraintTop_toTopOf="@+id/audioinfo"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:srcCompat="@drawable/ic_outline_cancel_24" />
+
+                    <ImageButton
+                        android:id="@+id/audiodump"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="#00FFFFFF"
+                        app:layout_constraintBottom_toBottomOf="@+id/audiotime"
+                        app:layout_constraintEnd_toStartOf="@+id/audiotime"
+                        app:layout_constraintHorizontal_bias="0.324"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/audiostatus"
+                        app:layout_constraintVertical_bias="1.0"
+                        app:srcCompat="@drawable/ic_baseline_delete_24" />
+
+                    <TextView
+                        android:id="@+id/audioinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:text="Hold for record"
+                        android:textColor="#F6F6F6"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.501"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                    <TextView
+                        android:id="@+id/audiostatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Start record"
+                        android:textColor="#E91E63"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/recordaudiobtn"
+                        app:layout_constraintHorizontal_bias="0.501"
+                        app:layout_constraintStart_toStartOf="@+id/recordaudiobtn"
+                        app:layout_constraintTop_toBottomOf="@+id/audioinfo"
+                        app:layout_constraintVertical_bias="0.65999997" />
+
+                    <TextView
+                        android:id="@+id/audiotime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="30dp"
+                        android:text="0:00"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/recordaudiobtn"
+                        app:layout_constraintStart_toStartOf="@+id/recordaudiobtn"
+                        app:layout_constraintTop_toBottomOf="@+id/audiostatus"
+                        app:layout_constraintVertical_bias="0.076" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:cardBackgroundColor="#E91E63"
+                        app:cardCornerRadius="40dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/audiotime"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.9"
+
+                        app:layout_constraintStart_toEndOf="@+id/audiostatus"
+                        app:layout_constraintTop_toTopOf="@+id/audiostatus">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageButton
+                                android:id="@+id/audiosend"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="6dp"
+                                android:layout_marginTop="6dp"
+                                android:layout_marginRight="4dp"
+                                android:layout_marginBottom="6dp"
+                                android:background="#00000000"
+                                android:backgroundTint="#00FFFFFF"
+                                android:onClick="sendmessage"
+                                android:scaleX="1.2"
+                                android:scaleY="1.2"
+                                android:src="@drawable/ic_baseline_send_24"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:background="#131313"
+                android:backgroundTint="#131313"
+                android:text="TextView" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

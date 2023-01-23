@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "34148056156",
+    "firebase_url": "https://yaari-8ae4e-default-rtdb.firebaseio.com",
+    "project_id": "yaari-8ae4e",
+    "storage_bucket": "yaari-8ae4e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34148056156:android:1b8d6238393c5fc0a8fa99",
+        "android_client_info": {
+          "package_name": "com.harry9425.yaari"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34148056156-4j55geblub9ittroujk3bgn3ai2rdbvu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.harry9425.yaari",
+            "certificate_hash": "a9e540622b2dea208de881123a4cc97ad9670e3b"
+          }
+        },
+        {
+          "client_id": "34148056156-9tdnjkjqhf551n62h499uqij2jij7fn0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXkRHicaGfbIS5vvG-ZWxQjP4Vr-JtO1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34148056156-9tdnjkjqhf551n62h499uqij2jij7fn0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
