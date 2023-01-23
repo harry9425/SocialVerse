@@ -1,5 +1,5 @@
 # SocialVerse
-Introducing our revolutionary new app that combines the best features of WhatsApp and Instagram, providing you with an all-in-one social media experience. With our live chat and audio and video call features, you can easily stay connected with your friends and family, no matter where they are in the world. Whether you're looking to catch up with loved ones or hold a business meeting, our app makes it easy to stay in touch with the people who matter most.
+# Introducing our revolutionary new app that combines the best features of WhatsApp and Instagram, providing you with an all-in-one social media experience. With our live chat and audio and video call features, you can easily stay connected with your friends and family, no matter where they are in the world. Whether you're looking to catch up with loved ones or hold a business meeting, our app makes it easy to stay in touch with the people who matter most.
 
 In addition to our messaging capabilities, we also offer a built-in payment portal, similar to UPI apps, which allows for seamless transactions between users. You can easily send and receive money with just a few taps, making it easy to split bills or send money to loved ones.
 
@@ -13,4 +13,4 @@ Though the app is not yet available for download, we have embedded a YouTube lin
 
 So don't wait, check out the YouTube link and see for yourself how our app can make your life easier and more convenient!
  
-Youtube LINK ::::>>>> https://youtu.be/AVgSTzo_UfU
+# Youtube LINK ============>> https://youtu.be/AVgSTzo_UfU
